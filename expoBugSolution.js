@@ -1,0 +1,3 @@
+The solution involved carefully examining the `package.json` file for any dependency conflicts or issues, especially focusing on libraries that impact the metro bundler. In some instances, conflicting versions of `metro-resolver` and the minifier (e.g., `metro-minify-terser`) can cause this type of hang.
+
+The fix was to update the specific dependencies related to the bundler.  In my case it was related to `metro-resolver` and `metro-minify-terser`.  Carefully examine your `package.json` and consult the Expo and React Native documentation to ensure compatibility between dependencies. A manual `yarn install` or `npm install` may be required to fully resolve any remaining issues.
